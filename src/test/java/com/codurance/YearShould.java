@@ -20,7 +20,9 @@ public class YearShould {
   @ParameterizedTest
   @CsvSource({
       "1997, false",
-      "1996, true"
+      "1996, true",
+      "1600, true",
+      "1800, false"
   })
   void return_correct_check_for_leap_year(int input, boolean output) {
     assertEquals(output, newYear(input).check());
